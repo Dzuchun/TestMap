@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".MainActivity">
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/user_location"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTarget"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPickUserLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/target_location"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRoute"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPickTargetLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRoute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/build_route_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPickUserLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_location"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewUser"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonChooseUserLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewUser" />
+
+    <ImageButton
+        android:id="@+id/imageButtonChooseUserLocation"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="4dp"
+        android:contentDescription="@string/pick_location"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonChooseTargetLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPickUserLocation"
+        app:layout_constraintTop_toBottomOf="@+id/mapView"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/buttonPickTargetLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_location"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewTarget"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonChooseTargetLocation"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewTarget" />
+
+    <ImageButton
+        android:id="@+id/imageButtonChooseTargetLocation"
+        android:layout_width="63dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/pick_location"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRoute"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonPickTargetLocation"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonChooseUserLocation"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

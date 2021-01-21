@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TestMap</string>
+    <string name="user_location">User Location</string>
+    <string name="target_location">Target Location</string>
+    <string name="pick_location">Pick on map</string>
+    <string name="picking_location">Tap to pick</string>
+    <string name="build_route_button">Build Route</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiZHp1Y2h1biIsImEiOiJja2s0aHNhcmEwNmk2Mndwa3pycWt1c3k3In0.mw95CU--3YHlOm-3DW2tOA</string>
+</resources>
